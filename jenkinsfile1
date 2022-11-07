@@ -14,6 +14,11 @@ pipeline{
                 sh "zip -r apache-1.zip *"
             }
         }
+        stage('deployintos3'){
+            steps{
+                sh "aws s3 cp apache-1.zip s3://apachehtml/apachewebsite/ "
+            }
+        }
     }
 
 }
