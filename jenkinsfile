@@ -3,12 +3,11 @@ pipeline{
     stages{
         stage(scm checkout){
             steps{
-                git clone ''https://github.com/reddyvarisrinu95/srinivasapp.git'
+                git clone 'https://github.com/reddyvarisrinu95/srinivasapp.git'
             }
         stage(build a package){
             steps{
-                sh'''
-                zip -r srinu.zip *
+                sh 'zip -r srinu.zip *'
             
             }
         }    
