@@ -1,12 +1,12 @@
-pipeline{
+pipeline {
     agent any
-    stages{
-        stage('checkoutcode'){
-            steps{
+    stages {
+        stage('checkoutcode') {
+            steps {
                 git clone 'https://github.com/reddyvarisrinu95/srinivasapp.git'
             }
-        stage('build'){
-            steps{
+        stage('build') {
+            steps {
                 sh 'zip -r srinu.zip *'
             
             }
