@@ -22,8 +22,8 @@ pipeline{
         stage('deployinto apache'){
             steps{
                 sh "aws s3 cp apache-1.zip s3://apachehtml/apachewebsite/apache-1.zip"
-                sh "unzip apache-1.zip ."
-                sh "scp * root@172.31.31.125:/var/www/index.html"
+                sh "unzip -r apache-1.zip"
+                sh "scp index.html root@172.31.31.125:/var/www/html"
             }
         }
     }
