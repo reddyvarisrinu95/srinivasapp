@@ -1,13 +1,13 @@
 pipeline{
-    agentany
+agentany
     stages{
-        stage(scm checkout){
+        stage('checkoutcode'){
             steps{
-                git clone 'https://github.com/reddyvarisrinu95/srinivasapp.git'
+                git url: 'https://github.com/reddyvarisrinu95/srinivasapp.git', branch: 'master'
             }
-        stage(build a package){
+        stage('build'){
             steps{
-                sh 'zip -r srinu.zip *'
+                sh "zip -r srinu.zip *"
             
             }
         }    
