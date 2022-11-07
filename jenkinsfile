@@ -5,10 +5,13 @@ pipeline{
     stages{
 
         stage('checkoutcode'){
+
             steps{
                 sh "git clone https://github.com/reddyvarisrinu95/srinivasapp.git"
             }
+        }
         stage('build'){
+            
             steps{
                 sh "zip -r srinu.zip *"
             
