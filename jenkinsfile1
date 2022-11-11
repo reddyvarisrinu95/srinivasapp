@@ -6,15 +6,15 @@ pipeline{
 
         stage('checkoutcode'){
             steps{
-              "git url: " 
+              "git url: https://github.com/reddyvarisrinu95/srinivasapp.git " 
             }
         }
         stage('build'){
             steps{
-                sh " "
+                sh "mvn clean package"
             }
         }
-        stage('deployintos3'){
+        /*stage('deployintos3'){
             steps{
                 sh "aws s3 cp apache-1.zip s3://apachehtml/apachewebsite/ "
             }
@@ -25,7 +25,7 @@ pipeline{
                 sh "unzip -z apache-1.zip"
                 sh "scp index.html root@172.31.31.125:/var/www/html"
             }
-        }
+        }*/
     }
 
-}
+}//pipelineclosing
