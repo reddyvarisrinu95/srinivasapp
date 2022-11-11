@@ -6,12 +6,12 @@ pipeline{
 
         stage('checkoutcode'){
             steps{
-                sh "git clone https://github.com/reddyvarisrinu95/srinivasapp.git" 
+              "git url: " 
             }
         }
         stage('build'){
             steps{
-                sh "zip -r apache-1.zip * "
+                sh " "
             }
         }
         stage('deployintos3'){
